@@ -8,17 +8,17 @@
       <!-- Icon Cards-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-envelope"></i>Daftar Pesan</div>
+          <i class="fa fa-envelope"></i> Daftar Pesan</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th width="25%">N0</th>
-                  <th width="25%">Full-Name</th>
+                  <th width="25%">No</th>
+                  <th width="25%">Nama</th>
                   <th width="25%">E-Mail</th>
-                  <th width="25%">Time</th>
-                  <th width="25%">Option</th>
+                  <th width="25%">Waktu</th>
+                  <th width="25%">Aksi</th>
                 </tr>
               </thead>
               <tbody>

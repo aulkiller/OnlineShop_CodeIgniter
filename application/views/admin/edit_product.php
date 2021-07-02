@@ -7,7 +7,7 @@
         <a href="<?= site_url('admin');?>">Dashboard</a>
       </li>
       <li class="breadcrumb-item">
-        <a href="<?= site_url('admin/view_product');?>">Product Listing</a>
+        <a href="<?= site_url('admin/view_product');?>">List Produk</a>
       </li>
       <li class="breadcrumb-item active">Edit Product</li>
     </ol>

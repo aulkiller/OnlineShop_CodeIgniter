@@ -6,35 +6,35 @@
       <li class="breadcrumb-item">
         <a href="<?= site_url('admin');?>">Dashboard</a>
       </li>
-      <li class="breadcrumb-item active">Product Listing</li>
+      <li class="breadcrumb-item active">List Produk</li>
     </ol>
     <!-- View Product DataTables Card-->
     <div class="card mb-3">
       <div class="card-header">
-        <i class="fa fa-shopping-bag"></i> Product List </div>
+        <i class="fa fa-shopping-bag"></i> List Produk </div>
       <div class="card-body">
         <div class="table-responsive">
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
               <tr>
-                <th width="10%">N0</th>
-                <th width="20%">Product Name</th>
-                <th width="10%">Price</th>
+                <th width="10%">No</th>
+                <th width="20%">Nama Produk</th>
+                <th width="10%">Harga</th>
                 <th width="20%">Deskripsi</th>
-                <th width="20%">Category</th>
+                <th width="20%">Kategori</th>
                 <!-- <th width="20%">Add Time</th> -->
-                <th width="10%">Options</th>
+                <th width="10%">Pengaturan</th>
               </tr>
             </thead>
             <tfoot>
               <tr>
                 <th>ID</th>
-                <th>Product Name</th>
-                <th>Price</th>
+                <th>Nama Produk</th>
+                <th>Harga</th>
                 <th>Deskripsi</th>
-                <th>Category</th>
+                <th>Kategori</th>
                 <!-- <th>Add Time</th> -->
-                <th>Options</th>
+                <th>Pengaturan</th>
               </tr>
             </tfoot>
             <tbody>
@@ -42,7 +42,7 @@
                   <tr>
                     <td><?= $count++; ?></td>
                     <td><?= $pl->product_name ?></td>
-                    <td>$ <?= $pl->price ?></td>
+                    <td>Rp <?= $pl->price ?></td>
                     <td><?= $pl->short_desc; ?></td>
                     <td><?= $pl->category_name ?></td>
                     <!-- <td><?php $date = new DateTime($pl->add_time); echo $date->format('d M Y'); ?></td> -->
@@ -53,11 +53,11 @@
                       </a>
                       <?php if($pl->active_flag == 0): ?>
                         <a href='<?= site_url('product/changeActiveStatus/'.$pl->product_id).'/1'?>'>
-                          <button class="btn btn-danger" style="width:100%" >Deactivate</button>
+                          <button class="btn btn-danger" style="width:100%" >Matikan</button>
                         </a>
                       <?php elseif($pl->active_flag == 1): ?>
                         <a href='<?= site_url('product/changeActiveStatus/'.$pl->product_id).'/0'?>'>
-                          <button class="btn btn-success" style="width:100%" >Re-activate</button>
+                          <button class="btn btn-success" style="width:100%" >Nyalakan Kembali</button>
                         </a>
                       <?php endif; ?>
                     </td>

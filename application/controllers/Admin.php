@@ -40,7 +40,7 @@ class Admin extends My_Controller
     {
         $this->gate_model->admin_gate();
         $data["userlist"] = $this->admin_model->get_users();
-        $this->load->view('layout/dashboard/header', array('title' => 'View Users'));
+        $this->load->view('layout/dashboard/header', array('title' => 'Kelola Pengguna'));
         $this->loadSidebar("show_user", "manage_user_active");
         $this->load->view('admin/userlist', $data);
         $this->load->view('layout/dashboard/footer');
@@ -51,7 +51,7 @@ class Admin extends My_Controller
         $this->gate_model->admin_gate();
         $data["productlist"] = $this->product_model->getAllProducts();
         $data["categories"] = $this->category_model->getAllCategoriesWithSubCategories();
-        $this->load->view('layout/dashboard/header', array("title" => "View Products"));
+        $this->load->view('layout/dashboard/header', array("title" => "Kelola Produk"));
         $this->loadSidebar("show_product", "manage_product_active");
         $this->load->view('admin/view_product',$data);
         $this->load->view('layout/dashboard/footer');
