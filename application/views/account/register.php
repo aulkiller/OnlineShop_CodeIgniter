@@ -13,7 +13,7 @@
                 <input class="form-control" id="FName" name="FName" type="text" aria-describedby="nameHelp" placeholder="Enter first name" value="<?= set_value('FName'); ?>" >
               </div>
               <div class="col-md-6">
-                <label for="LName">nama Belakang</label>
+                <label for="LName">Nama Belakang</label>
                 <input class="form-control" id="LName" name="LName" type="text" aria-describedby="nameHelp" placeholder="Enter last name" value="<?= set_value('LName'); ?>">
               </div>
             </div>

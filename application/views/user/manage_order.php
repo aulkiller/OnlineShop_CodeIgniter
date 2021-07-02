@@ -20,7 +20,7 @@
                   <th>No</th>
                   <th>Total Harga</th>
                   <th>Tanggal Pesan</th>
-                  <th>Pengaturan</th>
+                  <th>Aksi</th>
                 </tr>
               </thead>
               <tfoot>
@@ -28,7 +28,7 @@
                   <th>ID Pesanan</th>
                   <th>Total Harga</th>
                   <th>Tanggal Pesan</th>
-                  <th>Pengaturan</th>
+                  <th>Aksi</th>
                 </tr>
               </tfoot>
               <tbody>

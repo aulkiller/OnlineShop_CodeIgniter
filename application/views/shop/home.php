@@ -43,7 +43,7 @@
 		<div class="col-lg-9">
 			<div id="search-bar" class=" mt-4 mb-2">
 				<div class="input-group">
-					<input type="text" name="search" id="search" class="form-control" placeholder="Search Product..."/>
+					<input type="text" name="search" id="search" class="form-control" placeholder="Cari Produk..."/>
 					<span class="input-group-btn">
 						<button class="btn btn-primary" type="button">
 							<i class="fa fa-search"></i>

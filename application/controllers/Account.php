@@ -11,7 +11,7 @@ class Account extends CI_Controller {
         Login Page
     **/
     public function index() {
-        $this->load->view('layout/account/header', array("title" => "Login"));
+        $this->load->view('layout/account/header', array("title" => "Masuk"));
         $this->load->view('account/login');
         $this->load->view('layout/account/footer');
     }
@@ -20,7 +20,7 @@ class Account extends CI_Controller {
         Registration Page
     **/
     public function register() {
-        $this->load->view('layout/account/header', array("title" => "Register Account"));
+        $this->load->view('layout/account/header', array("title" => "Buat Akun"));
         $this->load->view('account/register');
         $this->load->view('layout/account/footer');
     }
@@ -56,10 +56,10 @@ class Account extends CI_Controller {
         );
 
         if ($this->account_model->register($array)){
-            $this->session->set_flashdata('fail', '<div class="alert alert-success" style="margin-top:10px" role="alert"> Account Registered Successfully!</div>'); 
+            $this->session->set_flashdata('fail', '<div class="alert alert-success" style="margin-top:10px" role="alert"> Berhasil Mendaftarkan Akun!</div>'); 
             redirect('account');
         } else {
-            $this->session->set_flashdata('register', '<div class="alert alert-danger" style="margin-top:10px" role="alert">Failed to register account!</div>'); 
+            $this->session->set_flashdata('register', '<div class="alert alert-danger" style="margin-top:10px" role="alert">Gagal Mendaftarkan Akun!</div>'); 
             redirect('account/register');
         }
 
@@ -87,19 +87,19 @@ class Account extends CI_Controller {
         if ($result == "user") {
             $redirect_to   = 'shop';
             $flash_type    = 'success';
-            $flash_content = '<div class="alert alert-primary mt-4"role="alert">You have successfully logged in as <span href="#" class="alert-link">'.$username.'</span>. Happy browsing.</div>';
+            $flash_content = '<div class="alert alert-primary mt-4"role="alert">Anda berhasil masuk sebagai <span href="#" class="alert-link">'.$username.'</span>. Selamat Mencari.</div>';
         } else if ($result == "admin") {
             $redirect_to   = 'Admin';
             $flash_type    = 'success';
-            $flash_content = '<div class="alert alert-primary mt-4" role="alert">You have successfully logged in as <span href="#" class="alert-link">'.$username.'</span>. You are the Admin.</div>';
+            $flash_content = '<div class="alert alert-primary mt-4" role="alert">Anda berhasil masuk sebagai <span href="#" class="alert-link">'.$username.'</span>. Anda adalah admin.</div>';
         } else if ($result == "ban") {
             $redirect_to   = 'shop';
             $flash_type    = 'success';
-            $flash_content = '<div class="alert alert-danger mt-4" role="alert">You are banned from this website.</div>';
+            $flash_content = '<div class="alert alert-danger mt-4" role="alert">Anda telah diban dari website ini.</div>';
         } else {
             $redirect_to   = 'account';
             $flash_type    = 'fail';
-            $flash_content = '<div class="alert alert-danger mt-4" role="alert">Login failed.</div>';
+            $flash_content = '<div class="alert alert-danger mt-4" role="alert">Gagal masuk.</div>';
         }
 
         $this->session->set_flashdata($flash_type, $flash_content);

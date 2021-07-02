@@ -1,5 +1,5 @@
 <div class="jumbotron center" style="min-height: 350px; background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(<?= base_url('style/assets/images/contact.jpeg')?>) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;">
-	<h1 class="text-center display-1 pt-5" style="color: white;">Kontak Kami</h1> 
+	<h1 class="text-center display-1 pt-5" style="color: white;">Kontak</h1> 
 </div>
 
 <div class="container">
@@ -19,6 +19,6 @@
 	<label>Pesan</label>
 	<textarea class="form-control" name="message"><?= set_value('message'); ?></textarea>
 	<br>
-	<input type="submit" value="Submit" class="btn btn-primary form-control"/>
+	<input type="submit" value="Kirim" class="btn btn-primary form-control"/>
 	<?= form_close(); ?>
 </div>

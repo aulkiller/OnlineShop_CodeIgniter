@@ -30,14 +30,14 @@
 				// alert(quantity);
 				if (quantity == "") {
 						$("#alert_modal").modal("show");
-						$("#modal_body").html("Please enter the quantity");
+						$("#modal_body").html("Masukkan jumlah barang terlebih dahulu");
 						$("#modal_title").html("Warning");
-						$("#modal_footer").html("<button type='button' class='btn btn-danger' data-dismiss='modal'>Close</button>");
+						$("#modal_footer").html("<button type='button' class='btn btn-danger' data-dismiss='modal'>Tutup</button>");
 				} else if (quantity < 0) {
 						$("#alert_modal").modal("show");
 						$("#modal_body").html("Quantity cannot be less than 0!");
 						$("#modal_title").html("Warning");
-						$("#modal_footer").html("<button type='button' class='btn btn-danger' data-dismiss='modal'>Close</button>");
+						$("#modal_footer").html("<button type='button' class='btn btn-danger' data-dismiss='modal'>Tutup</button>");
 				} else {
 					$.post("<?= site_url('cart/addToCart'); ?>", {"quantity":quantity, "product_id":product_id},
 						function(data) {
@@ -49,9 +49,9 @@
 								var footer = "<a href='<?= site_url('user/your_cart');?>'>";
 								footer += "<button type='button' class='btn btn-success'>Checkout</button>";
 								footer += "</a>";
-								footer += "<button type='button' class='btn btn-danger' data-dismiss='modal'>Close</button>";
+								footer += "<button type='button' class='btn btn-danger' data-dismiss='modal'>Tutup</button>";
 							} else {
-								var footer = "<button type='button' class='btn btn-danger' data-dismiss='modal'>Close</button>";
+								var footer = "<button type='button' class='btn btn-danger' data-dismiss='modal'>Tutup</button>";
 							}
 							$("#modal_footer").html(footer);
 						}, 'json'
@@ -88,10 +88,10 @@
 						<li class="nav-item">
 							<?php 	if ($this->session->userdata('usertype') == "admin") : ?>
 								<li class="nav-item"><a class="nav-link" href="<?php echo base_url()?>index.php/admin"><b>Dashboard Admin</b></a></li>
-								<li class="nav-item"><a class="nav-link" style="margin-left:5px" data-toggle="modal" data-target="#logout"><button class="btn btn-danger py-1">Log Out</button></a></li>
+								<li class="nav-item"><a class="nav-link" style="margin-left:5px" data-toggle="modal" data-target="#logout"><button class="btn btn-danger py-1">Keluar</button></a></li>
 							<?php elseif ($this->session->userdata('usertype') == "user") : ?>
-								<li class="nav-item"><a class="nav-link"  href="<?php echo base_url()?>index.php/user/dashboard"><b>Your Profile</b></a></li>
-								<li class="nav-item"><a class="nav-link" style="margin-left:5px" data-toggle="modal" data-target="#logout"><button class="btn btn-danger py-1">Log Out</button></a></li>
+								<li class="nav-item"><a class="nav-link"  href="<?php echo base_url()?>index.php/user/dashboard"><b>Profil Anda</b></a></li>
+								<li class="nav-item"><a class="nav-link" style="margin-left:5px" data-toggle="modal" data-target="#logout"><button class="btn btn-danger py-1">Keluar</button></a></li>
 							<?php else : ?>
 								<a class="nav-link" href="<?php echo base_url()?>index.php/Account"><button class="btn btn-success py-1">Masuk</button></a>
 							<?php endif; ?>

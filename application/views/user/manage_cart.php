@@ -26,7 +26,7 @@
                     <th>Nama</th>
                     <th>Jumlah</th>
                     <th>Harga</th>
-                    <th>Pengaturan</th>
+                    <th>Aksi</th>
                   </thead>
                   <?php foreach($cartData as $cart): ?>
                   <tr align="center">

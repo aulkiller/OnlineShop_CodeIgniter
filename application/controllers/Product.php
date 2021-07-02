@@ -48,7 +48,7 @@ class Product extends My_Controller {
     
     public function update($product_id) {
         $this->form_validation->set_rules(
-            'product_name', 'Product Name',
+            'product_name', 'Nama Produk',
             'required|min_length[10]',
             array(
                 'required' => '<div class="alert alert-danger">%s belum diisi.</div>',
@@ -57,7 +57,7 @@ class Product extends My_Controller {
         );
     
         $this->form_validation->set_rules(
-            'product_description', 'Product Description', 'required|min_length[10]',
+            'product_description', 'Deskripsi Produk', 'required|min_length[10]',
             array(
                 'required' => '<div class="alert alert-danger">%s belum diisi.</div>',
                 'min_length' => '<div class="alert alert-danger">{field} harus memiliki minimum {param} karakter</div>'
@@ -65,8 +65,8 @@ class Product extends My_Controller {
         );
     
         $this->form_validation->set_rules(
-            'product_short_description', 'Product Short Description', 
-            'required|min_length[10]|max_length[50]',
+            'product_short_description', 'Deskripsi Singkat Produk', 
+            'required|min_length[10]|max_length[100]',
             array(
                 'required' => '<div class="alert alert-danger">%s belum diisi.</div>',
                 'min_length' => '<div class="alert alert-danger">{field} harus memiliki minimum {param} karakter</div>',
@@ -142,7 +142,7 @@ class Product extends My_Controller {
     
     public function add() {
         $this->form_validation->set_rules(
-            'product_name', 'Product Name',
+            'product_name', 'Nama Produk',
             'required|min_length[10]',
             array(
                 'required' => '<div class="alert alert-danger">%s belum diisi.</div>',
@@ -151,7 +151,7 @@ class Product extends My_Controller {
         );
 
         $this->form_validation->set_rules(
-            'product_description', 'Product Description', 'required|min_length[10]',
+            'product_description', 'Deskripsi Produk', 'required|min_length[10]',
             array(
                 'required' => '<div class="alert alert-danger">%s belum diisi.</div>',
                 'min_length' => '<div class="alert alert-danger">{field} harus memiliki minimum {param} karakter</div>'
@@ -159,8 +159,8 @@ class Product extends My_Controller {
         );
     
         $this->form_validation->set_rules(
-            'product_short_description', 'Product Short Description', 
-            'required|min_length[10]|max_length[50]',
+            'product_short_description', 'Deskripsi Singkat Produk', 
+            'required|min_length[10]|max_length[100]',
             array(
                 'required' => '<div class="alert alert-danger">%s belum diisi.</div>',
                 'min_length' => '<div class="alert alert-danger">{field} harus memiliki minimum {param} karakter</div>',
@@ -185,7 +185,7 @@ class Product extends My_Controller {
 
             // upload images
             $config['upload_path']          = './uploads/';
-            $config['allowed_types']        = 'gif|jpg|png';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $config['max_size']             = 1000;
             $config['max_width']            = 1000000;
             $config['max_height']           = 1000000;
@@ -207,12 +207,12 @@ class Product extends My_Controller {
                 if ($insert) {
                     $message = "<div class='alert alert-success alert-dismissable'>";
                     $message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-                    $message .= "<strong>Success!</strong> $product_name telah ditambahkan!";
+                    $message .= "<strong>Berhasil!</strong> $product_name telah ditambahkan!";
                     $message .= "</div>";
                 } else {
                     $message = "<div class='alert alert-danger alert-dismissable'>";
                     $message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-                    $message .= "<strong>Fail!</strong> Gagal menambahkan $product_name";
+                    $message .= "<strong>Gagal!</strong> Gagal menambahkan $product_name";
                     $message .= "</div>";
                 }
                 $this->session->set_flashdata('msg', $message); 
@@ -228,22 +228,22 @@ class Product extends My_Controller {
         if ($change && $active_flag == 1) {
             $message = "<div class='alert alert-success alert-dismissable'>";
             $message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-            $message .= "<strong>Success!</strong> $product_name telah dinonaktifkan!";
+            $message .= "<strong>Berhasil!</strong> $product_name telah dinonaktifkan!";
             $message .= "</div>";
         } elseif (!$change && $active_flag == 1) {
             $message = "<div class='alert alert-danger alert-dismissable'>";
             $message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-            $message .= "<strong>Fail!</strong> Gagal menonaktifkan $product_name";
+            $message .= "<strong>Gagal!</strong> Gagal menonaktifkan $product_name";
             $message .= "</div>";
         } elseif($change && $active_flag == 0) {
             $message = "<div class='alert alert-success alert-dismissable'>";
             $message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-            $message .= "<strong>Success!</strong> $product_name telah diaktifkan kembali";
+            $message .= "<strong>Berhasil!</strong> $product_name telah diaktifkan kembali";
             $message .= "</div>";
         } elseif(!$change && $active_flag == 0) {
             $message = "<div class='alert alert-danger alert-dismissable'>";
             $message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-            $message .= "<strong>Fail!</strong> Gagal mengaktfkan kembali $product_name";
+            $message .= "<strong>Gagal!</strong> Gagal mengaktfkan kembali $product_name";
             $message .= "</div>";
         }
         $this->session->set_flashdata('msg', $message); 

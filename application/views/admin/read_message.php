@@ -6,15 +6,15 @@
         <li class="breadcrumb-item">
             <a href="<?= site_url('admin');?>">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Read Message</li>
+        <li class="breadcrumb-item active">Baca Pesan</li>
       </ol>
       <!-- Icon Cards-->
       <div class="card mb-3">
         <div class="card-header">
-          Read Message 
+        Baca Pesan 
         </div>
         <div class="card-body">
-            <label><strong>Full Name</strong></label>
+            <label><strong>Nama Lengkap</strong></label>
             <br>
             <p><?= $message->full_name;?></p>
             
@@ -22,7 +22,7 @@
             <br>
             <p><?= $message->email;?></p>
             
-            <label><strong>Message</strong></label>
+            <label><strong>Pesan</strong></label>
             <br>
             <p><?= $message->message;?></p>
         </div>

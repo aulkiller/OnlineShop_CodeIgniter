@@ -53,11 +53,11 @@
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Orders and Cart">
 					<a class="nav-link nav-link-collapse" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
 						<i class="fa fa-fw fa-shopping-cart"></i>
-						<span class="nav-link-text">Order dan Keranjang</span>
+						<span class="nav-link-text">Pesanan dan Keranjang</span>
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_order; ?>" id="collapseMulti5">
 						<li class="<?= $manage_order_active; ?>">
-							<a href="<?= site_url('admin/manage_order'); ?>">Kelola Order</a>
+							<a href="<?= site_url('admin/manage_order'); ?>">Kelola Pesanan</a>
 						</li>
 						<li class="<?= $manage_cart_active; ?>">
 							<a href="<?= site_url('admin/manage_cart'); ?>">Kelola Keranjang</a>

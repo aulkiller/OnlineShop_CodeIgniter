@@ -5,7 +5,7 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
+        <li class="breadcrumb-item active">Dashboard Saya</li>
       </ol>
       <!-- Icon Cards-->
       <div class="row">
@@ -15,10 +15,10 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-comments"></i>
               </div>
-              <div class="mr-5">26 New Messages!</div>
+              <div class="mr-5">26 Pesan Baru!</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
+              <span class="float-left">Lihat Detail</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
               </span>
@@ -31,10 +31,10 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-list"></i>
               </div>
-              <div class="mr-5">11 New Tasks!</div>
+              <div class="mr-5">11 Tugas Baru!</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
+              <span class="float-left">Lihat Detail</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
               </span>
@@ -47,10 +47,10 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-shopping-cart"></i>
               </div>
-              <div class="mr-5">123 New Orders!</div>
+              <div class="mr-5">123 Pesanan Baru!</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
+              <span class="float-left">Lihat Detail</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
               </span>
@@ -63,10 +63,10 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-support"></i>
               </div>
-              <div class="mr-5">13 New Tickets!</div>
+              <div class="mr-5">13 Tiket Baru!</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
+              <span class="float-left">Liaht Detail</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
               </span>
@@ -77,40 +77,40 @@
       <!-- Area Chart Example-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-area-chart"></i> Area Chart Example</div>
+          <i class="fa fa-area-chart"></i> Contoh Area Chart</div>
         <div class="card-body">
           <canvas id="myAreaChart" width="100%" height="30"></canvas>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        <div class="card-footer small text-muted">Berubah Kemarin saat 11:59 PM</div>
       </div>
       <div class="row">
         <div class="col-lg-8">
           <!-- Example Bar Chart Card-->
           <div class="card mb-3">
             <div class="card-header">
-              <i class="fa fa-bar-chart"></i> Bar Chart Example</div>
+              <i class="fa fa-bar-chart"></i> Contoh Bar Chart </div>
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-8 my-auto">
                   <canvas id="myBarChart" width="100" height="50"></canvas>
                 </div>
                 <div class="col-sm-4 text-center my-auto">
-                  <div class="h4 mb-0 text-primary">$34,693</div>
+                  <div class="h4 mb-0 text-primary">Rp34,693,000</div>
                   <div class="small text-muted">YTD Revenue</div>
                   <hr>
-                  <div class="h4 mb-0 text-warning">$18,474</div>
+                  <div class="h4 mb-0 text-warning">RP18,474,000</div>
                   <div class="small text-muted">YTD Expenses</div>
                   <hr>
-                  <div class="h4 mb-0 text-success">$16,219</div>
+                  <div class="h4 mb-0 text-success">Rp16,219,000</div>
                   <div class="small text-muted">YTD Margin</div>
                 </div>
               </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            <div class="card-footer small text-muted">Berubah Kemarin saat 11:59 PM</div>
           </div>
           <!-- Card Columns Example Social Feed-->
           <div class="mb-0 mt-4">
-            <i class="fa fa-newspaper-o"></i> News Feed</div>
+            <i class="fa fa-newspaper-o"></i> Berita Terkini</div>
           <hr class="mt-2">
           <div class="card-columns">
             <!-- Example Social Card-->
@@ -120,32 +120,32 @@
               </a>
               <div class="card-body">
                 <h6 class="card-title mb-1"><a href="#">David Miller</a></h6>
-                <p class="card-text small">These waves are looking pretty good today!
+                <p class="card-text small">Ombak sangat menarik hari ini
                   <a href="#">#surfsup</a>
                 </p>
               </div>
               <hr class="my-0">
               <div class="card-body py-2 small">
                 <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-thumbs-up"></i>Like</a>
+                  <i class="fa fa-fw fa-thumbs-up"></i>Suka</a>
                 <a class="mr-3 d-inline-block" href="#">
-                  <i class="fa fa-fw fa-comment"></i>Comment</a>
+                  <i class="fa fa-fw fa-comment"></i>Komen</a>
                 <a class="d-inline-block" href="#">
-                  <i class="fa fa-fw fa-share"></i>Share</a>
+                  <i class="fa fa-fw fa-share"></i>Sebarkan</a>
               </div>
               <hr class="my-0">
               <div class="card-body small bg-faded">
                 <div class="media">
                   <img class="d-flex mr-3" src="http://placehold.it/45x45" alt="">
                   <div class="media-body">
-                    <h6 class="mt-0 mb-1"><a href="#">John Smith</a></h6>Very nice! I wish I was there! That looks amazing!
+                    <h6 class="mt-0 mb-1"><a href="#">John Smith</a></h6>Sangat Menarik
                     <ul class="list-inline mb-0">
                       <li class="list-inline-item">
-                        <a href="#">Like</a>
+                        <a href="#">Suka</a>
                       </li>
                       <li class="list-inline-item">·</li>
                       <li class="list-inline-item">
-                        <a href="#">Reply</a>
+                        <a href="#">Respon</a>
                       </li>
                     </ul>
                     <div class="media mt-3">
@@ -153,14 +153,14 @@
                         <img src="http://placehold.it/45x45" alt="">
                       </a>
                       <div class="media-body">
-                        <h6 class="mt-0 mb-1"><a href="#">David Miller</a></h6>Next time for sure!
+                        <h6 class="mt-0 mb-1"><a href="#">David Miller</a></h6>Waktu lain pasti!
                         <ul class="list-inline mb-0">
                           <li class="list-inline-item">
-                            <a href="#">Like</a>
+                            <a href="#">Suka</a>
                           </li>
                           <li class="list-inline-item">·</li>
                           <li class="list-inline-item">
-                            <a href="#">Reply</a>
+                            <a href="#">Respon</a>
                           </li>
                         </ul>
                       </div>

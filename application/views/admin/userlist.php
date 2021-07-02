@@ -56,15 +56,15 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Unban this user?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Batalkan Ban?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Are you sure you want to unban this user?</div>
+          <div class="modal-body">Yakin ingin membatalkan ban terhadap orang ini?</div>
           <div class="modal-footer">
-            <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
-            <button class="btn btn-primary" type="button" onclick="acceptUnban()"data-dismiss="modal">Accept</button>
+            <button class="btn btn-default" type="button" data-dismiss="modal">Batal</button>
+            <button class="btn btn-primary" type="button" onclick="acceptUnban()"data-dismiss="modal">Ya</button>
           </div>
         </div>
       </div>
@@ -75,16 +75,16 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Ban this User?</h5>
+            <h5 class="modal-title">Ban Pengguna ini?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Are you sure you want to ban this user?.</div>
+          <div class="modal-body">Yakin ingin ban Pengguna ini?.</div>
           <div class="modal-footer">
             <input type="hidden" id="passedUserId" />
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <button class="btn btn-primary" type="button" onclick="acceptBan()"data-dismiss="modal">Accept</button>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+            <button class="btn btn-primary" type="button" onclick="acceptBan()"data-dismiss="modal">Ya</button>
           </div>
         </div>
       </div>

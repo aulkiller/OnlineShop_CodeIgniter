@@ -43,7 +43,7 @@ class Account_model extends CI_Model {
     {
         $this->form_validation->set_rules(
             'FName', 'First Name',
-            'trim|required|min_length[5]|max_length[20]|alpha',
+            'trim|required|min_length[5]|max_length[20]',
             array(
                 'required' => 'You have not provided %s.',
                 'min_length' => 'Your {field} needs to be at least {param} characters long',

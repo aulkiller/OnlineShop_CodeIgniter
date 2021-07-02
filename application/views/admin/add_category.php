@@ -6,27 +6,27 @@
       <li class="breadcrumb-item">
         <a href="<?= site_url('admin');?>">Dashboard</a>
       </li>
-      <li class="breadcrumb-item active">Add Category</li>
+      <li class="breadcrumb-item active">Tambah Kategori</li>
     </ol>
     <!-- Example DataTables Card-->
     <?= form_open('category/add', array('class' => 'form-horizontal')) ?>
     <div class="card mb-3">
       <div class="card-header">
-        Edit Category 
+        Tambah Kategori 
       </div>
       <div class="card-body">
         <div class="form-group">
-          <label class="control-label">Category Name</label>
+          <label class="control-label">Nama Kategori</label>
           <div>
             <input id="category_name" type="text" class="form-control" name="category_name">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="control-label">Parent Category</label>
+          <label class="control-label">Bagian dari Kategori</label>
           <div>
             <select id="parent_category_id" type="text" class="form-control" name="parent_category_id">
-              <option value="0">No Parent</option>
+              <option value="0">Kategori Baru</option>
               <?php 
                 foreach($parent_categories as $cat):
               ?>

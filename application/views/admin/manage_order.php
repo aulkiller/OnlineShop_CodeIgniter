@@ -16,20 +16,20 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Customer Name</th>
-                  <th>Total Price</th>
-                  <th>Checkout Date</th>
-                  <th>Options</th>
+                  <th>ID Checkout</th>
+                  <th>Nama Pelanggan</th>
+                  <th>Total Harga</th>
+                  <th>Tanggal Checkout</th>
+                  <th>Aksi</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
-                  <th>Checkout ID</th>
-                  <th>Customer Name</th>
-                  <th>Total Price</th>
-                  <th>Checkout Date</th>
-                  <th>Options</th>
+                  <th>ID Checkout</th>
+                  <th>Nama Pelanggan</th>
+                  <th>Total Harga</th>
+                  <th>Tanggal Checkout</th>
+                  <th>Aksi</th>
                 </tr>
               </tfoot>
               <tbody>

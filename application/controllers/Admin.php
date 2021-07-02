@@ -83,7 +83,7 @@ class Admin extends My_Controller
     {
         $this->gate_model->admin_gate();
         $data["categories"] = $this->category_model->getAllCategoriesWithSubCategories();
-        $this->load->view('layout/dashboard/header', array("title" => "Add Product"));
+        $this->load->view('layout/dashboard/header', array("title" => "Tambah Produk"));
         $this->loadSidebar("show_product", "add_product_active");
         $this->load->view('admin/add_product',$data);
         $this->load->view('layout/dashboard/footer');
@@ -113,10 +113,10 @@ class Admin extends My_Controller
         $data["subcategorylist"] = $this->category_model->getAllSubCategories()->result();
         foreach($data["subcategorylist"] as $d) {
             if ($d->parent_category_id == 0) {
-                $d->parent_category_name = "No Parent";
+                $d->parent_category_name = "Bukan Sub-Kategori";
             }
         }
-        $this->load->view('layout/dashboard/header', array("title" => "View Categories"));
+        $this->load->view('layout/dashboard/header', array("title" => "Kelola Kategori"));
         $this->loadSidebar("show_category", "manage_category_active");
         $this->load->view('admin/view_category',$data);
         $this->load->view('layout/dashboard/footer');
@@ -141,7 +141,7 @@ class Admin extends My_Controller
         $this->gate_model->admin_gate();
         $data["parent_categories"] = $this->category_model->getAllParentCategories()->result();
         $data["categories"] = $this->category_model->getAllCategoriesWithSubCategories();
-        $this->load->view('layout/dashboard/header', array("title" => "Add Category"));
+        $this->load->view('layout/dashboard/header', array("title" => "Tambah Kategori"));
         $this->loadSidebar("show_category", "add_category_active");
         $this->load->view('admin/add_category',$data);
         $this->load->view('layout/dashboard/footer');
@@ -156,7 +156,7 @@ class Admin extends My_Controller
             $order->totalPrice = $this->cart_model->getTotalCartPrice($order->cart_id);
         }
         $data["orders"] = $orders;
-        $this->load->view('layout/dashboard/header', array("title" => "Manage Orders"));
+        $this->load->view('layout/dashboard/header', array("title" => "Kelola Pesanan"));
         $this->loadSidebar("show_order", "manage_order_active");
         $this->load->view("admin/manage_order", $data);
         $this->load->view('layout/dashboard/footer');
@@ -171,7 +171,7 @@ class Admin extends My_Controller
         }
         
         $data["carts"] = $carts;
-        $this->load->view('layout/dashboard/header', array("title" => "Manage Cart"));
+        $this->load->view('layout/dashboard/header', array("title" => "Kelola Keranjang"));
         $this->loadSidebar("show_order", "manage_cart_active");
         $this->load->view("admin/manage_cart", $data);
         $this->load->view('layout/dashboard/footer');

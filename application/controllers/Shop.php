@@ -113,12 +113,12 @@ class Shop extends CI_Controller {
 
     public function addContact() {
         $this->form_validation->set_rules(
-            'full_name', 'Full Name',
+            'full_name', 'Nama Lengkap',
             'required|min_length[5]|max_length[100]',
             array(
-                'required' => $this->dangerAlert('You have not provided your %s.'),
-                'max_length' => $this->dangerAlert('Your {field} must not exceeds {param} characters long'),
-                'min_length' => $this->dangerAlert('Your {field} must be at least {param} characters long')
+                'required' => $this->dangerAlert('Anda belum melengkapi %s anda.'),
+                'max_length' => $this->dangerAlert('{field} anda tidak boleh melebihi {param} karakter'),
+                'min_length' => $this->dangerAlert('{field} setidaknya harus sepanjang {param} karakter')
             )
         );
 
@@ -126,18 +126,18 @@ class Shop extends CI_Controller {
             'e-mail', 'E-Mail',
             'required|valid_email',
             array(
-                'required' => $this->dangerAlert('You have not provided your %s.'),
-                'valid_email' => $this->dangerAlert('You did not provide a valid E-Mail Address')
+                'required' => $this->dangerAlert('Anda belum melengkapi %s anda.'),
+                'valid_email' => $this->dangerAlert('Email anda tidak valid')
             )
         );
 
         $this->form_validation->set_rules(
-            'message', 'Message',
+            'message', 'Pesan',
             'required|min_length[30]|max_length[500]',
             array(
-                'required' => $this->dangerAlert('You have not provided your %s.'),
-                'max_length' => $this->dangerAlert('Your {field} must not exceeds {param} characters long'),
-                'min_length' => $this->dangerAlert('Your {field} must be at least {param} characters long')
+                'required' => $this->dangerAlert('Anda belum melengkapi %s anda.'),
+                'max_length' => $this->dangerAlert('{field} anda tidak boleh melebihi {param} karakter'),
+                'min_length' => $this->dangerAlert('{field} setidaknya harus sepanjang {param} karakter')
             )
         );
 
@@ -149,9 +149,9 @@ class Shop extends CI_Controller {
             $data['message'] = $this->input->post('message');
             $insert = $this->contact_model->addMessage($data);
             if ($insert) {
-                $message = $this->successAlert('You have submitted a message!');
+                $message = $this->successAlert('Pesan anda berhasil terkirim!');
             } else {
-                $message = $this->dangerAlert('Fail to submit a message');
+                $message = $this->dangerAlert('Gagal mengirim pesan');
             }
             $this->session->set_flashdata('message', $message);
             redirect('shop/contact');

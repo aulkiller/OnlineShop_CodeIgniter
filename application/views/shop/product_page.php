@@ -12,7 +12,7 @@
 					<div class="card mt-4">
 						<div class="card-body">
 							<h3 class="card-title"><?= $product->product_name; ?></h3>
-							<h4>$ <?= $product->price?></h4>
+							<h4>Rp. <?= $product->price?></h4>
 							<strong>Deskripsi</strong>
 							<p class="card-text"><?= $product->short_desc?></p>
 							<input type="number" name="quantity" class="form-control" placeholder="Quantity" id="quantity_<?= $product->product_id; ?>" />

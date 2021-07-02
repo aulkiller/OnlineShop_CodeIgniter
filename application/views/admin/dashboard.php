@@ -32,7 +32,7 @@
                       </td>
                       <td>
                         <a href="<?= site_url('admin/read_message/'.$message->message_id)?>">
-                          <button class="btn btn-primary btn-block">Read</button>
+                          <button class="btn btn-primary btn-block">Baca Pesan</button>
                         </a>
                       </td>
                     </tr>
