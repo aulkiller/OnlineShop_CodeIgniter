@@ -20,7 +20,7 @@
                 <th width="10%">N0</th>
                 <th width="20%">Product Name</th>
                 <th width="10%">Price</th>
-                <th width="20%">Description</th>
+                <th width="20%">Deskripsi</th>
                 <th width="20%">Category</th>
                 <!-- <th width="20%">Add Time</th> -->
                 <th width="10%">Options</th>
@@ -31,7 +31,7 @@
                 <th>ID</th>
                 <th>Product Name</th>
                 <th>Price</th>
-                <th>Description</th>
+                <th>Deskripsi</th>
                 <th>Category</th>
                 <!-- <th>Add Time</th> -->
                 <th>Options</th>

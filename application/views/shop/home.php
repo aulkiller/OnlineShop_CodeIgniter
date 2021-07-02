@@ -5,7 +5,7 @@
 	<div id="alert_message"></div>
 	<div class="row">
 		<div class="col-lg-3">
-			<h3 class="my-4">Category</h3>
+			<h3 class="my-4">Kategori</h3>
 			<ul class="list-group">
 				<?php foreach( $categoryData as $category ): ?>
 					<li class="list-group-item">
@@ -78,7 +78,7 @@
 					</a>
 					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
+						<span class="sr-only">Berikutnya</span>
 					</a>
 				</div>
 				<?= form_close(); ?>
@@ -110,7 +110,7 @@
 								<br>
 								<button class="pull-right btn btn-block btn-primary" type="button" onclick="addToCart(<?= $product->product_id; ?>)">
 									<span class="fa fa-shopping-cart pull-left"></span>
-									Add to cart 		
+									Tambah ke Keranjang 		
 								</button>
 								<!-- <?= form_close(); ?> -->
 							</div>

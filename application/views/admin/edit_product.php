@@ -45,14 +45,14 @@
         </div>
 
         <div class="form-group">
-          <label class="control-label">Product Short Description</label>
+          <label class="control-label">Product Short Deskripsi</label>
           <div>
             <input id="product_short_description" type="text" class="form-control" name="product_short_description" value="<?= $product->short_desc; ?>">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="control-label">Product Long Description</label>
+          <label class="control-label">Deskripsi Panjang</label>
           <div>
             <textarea id="textarea" name="product_description"><?= $product->description; ?></textarea>
           </div>

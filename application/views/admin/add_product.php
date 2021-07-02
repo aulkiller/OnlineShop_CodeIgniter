@@ -44,18 +44,18 @@
         </div>
 
         <div class="form-group">
-          <?= form_error('product_short_description'); ?>
-          <label class="control-label">Product Short Description</label>
+          <?= form_error('product_short_Description'); ?>
+          <label class="control-label">Product Short Deskripsi</label>
           <div>
-            <input id="product_short_description" type="text" class="form-control" name="product_short_description" value="<?php echo set_value('product_short_description'); ?>">
+            <input id="product_short_Description" type="text" class="form-control" name="product_short_Description" value="<?php echo set_value('product_short_Description'); ?>">
           </div>
         </div>
 
         <div class="form-group">
-          <?= form_error('product_description'); ?>
-          <label class="control-label">Product Long Description</label>
+          <?= form_error('product_Description'); ?>
+          <label class="control-label">Deskripsi Panjang</label>
           <div>
-            <textarea id="textarea" name="product_description"></textarea>
+            <textarea id="textarea" name="product_Description"></textarea>
           </div>
         </div>
 
