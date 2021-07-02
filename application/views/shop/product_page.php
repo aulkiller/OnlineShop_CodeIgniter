@@ -13,7 +13,7 @@
 						<div class="card-body">
 							<h3 class="card-title"><?= $product->product_name; ?></h3>
 							<h4>$ <?= $product->price?></h4>
-							<strong>Short Deskripsi</strong>
+							<strong>Deskripsi</strong>
 							<p class="card-text"><?= $product->short_desc?></p>
 							<input type="number" name="quantity" class="form-control" placeholder="Quantity" id="quantity_<?= $product->product_id; ?>" />
 							<input type="hidden" name="product_id" class="form-control" value="<?= $product->product_id; ?>"/>
@@ -38,19 +38,19 @@
 
 					<div class="card card-outline-secondary my-4">
 						<div class="card-header">
-							Product Reviews
+							Penilaian Produk
 						</div>
 						<div class="card-body">
 							<?php foreach($reviews as $review):?>
 								<p><?= $review->review; ?></p>
-								<small class="text-muted">Posted by <?= $review->username; ?> on <?= date_format(date_create($review->post_time), "d M Y");?></small>
+								<small class="text-muted">Dinilai oleh <?= $review->username; ?> on <?= date_format(date_create($review->post_time), "d M Y");?></small>
 								<hr>
 							<?php endforeach; ?>
 							<?= form_open('product/addReview'); ?>
 								<input type="hidden" name="product_id" value="<?= $product_id; ?>"/>
 								<textarea id="textarea" class="form-control" name="review" <?= $disabled; ?>></textarea>
 								<br>
-								<button type="submit" class="btn btn-success" <?= $disabled; ?>>Leave a Review</button>
+								<button type="submit" class="btn btn-success" <?= $disabled; ?>>Beri Penilaian</button>
 							<?= form_close(); ?>
 						</div>
 					</div>

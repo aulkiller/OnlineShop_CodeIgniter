@@ -1,5 +1,5 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-		<a class="navbar-brand" href="<?php echo base_url().'index.php/admin'?>">Admin Dashboard</a>
+		<a class="navbar-brand" href="<?php echo base_url().'index.php/admin'?>">Dashboard Admin</a>
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -14,7 +14,7 @@
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
 					<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
 						<i class="fa fa-fw fa-users"></i>
-						<span class="nav-link-text">Users</span>
+						<span class="nav-link-text">Pengguna</span>
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_user; ?>" id="collapseMulti2">
 						<li class="<?= $manage_user_active; ?>">
@@ -25,7 +25,7 @@
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Products">
 					<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3" data-parent="#exampleAccordion">
 						<i class="fa fa-fw fa-gift"></i>
-						<span class="nav-link-text">Products</span>
+						<span class="nav-link-text">Produk</span>
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_product; ?>" id="collapseMulti3">
 						<li class="<?= $manage_product_active; ?>">
@@ -39,7 +39,7 @@
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Categories">
 					<a class="nav-link nav-link-collapse" data-toggle="collapse" href="#collapseMulti4" data-parent="#exampleAccordion">
 						<i class="fa fa-fw fa-tag"></i>
-						<span class="nav-link-text">Categories</span>
+						<span class="nav-link-text">Kategori</span>
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_category; ?>" id="collapseMulti4">
 						<li class="<?= $manage_category_active; ?>">

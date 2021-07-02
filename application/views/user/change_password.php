@@ -8,23 +8,23 @@
       <li class="breadcrumb-item">
         <a href="<?= site_url('user/dashboard')?>">Dashboard</a>
       </li>
-      <li class="breadcrumb-item active">Change password</li>
+      <li class="breadcrumb-item active">Ubah Password</li>
     </ol>
     <div class="card-body">
       <?=form_open(site_url('user/change_userpassword'));?>
         <div class="form-group">
-          <label for="email">Current Password</label>
-          <input class="form-control nospace" id="oldpassword" name="oldpassword" type="password" aria-describedby="emailHelp" placeholder="Enter Old Password" required="true">
+          <label for="email">Password Sekarang</label>
+          <input class="form-control nospace" id="oldpassword" name="oldpassword" type="password" aria-describedby="emailHelp" placeholder="Masukan Password Lama" required="true">
         </div>
         <div class="form-group">
-          <label for="email">New Password</label>
-          <input class="form-control nospace" id="newpassword" name="newpassword" type="password" aria-describedby="emailHelp" placeholder="Enter new Password" pattern=".{5,10}" required title="Please set your password between 5 to 10 characters">
+          <label for="email">Password Baru</label>
+          <input class="form-control nospace" id="newpassword" name="newpassword" type="password" aria-describedby="emailHelp" placeholder="Masukan Password Baru" pattern=".{5,10}" required title="Please set your password between 5 to 10 characters">
         </div>
         <div class="form-group">
-          <label for="email">Re-type New Password</label>
-          <input class="form-control nospace" id="renewpassword" name="renewpassword" type="password" aria-describedby="emailHelp" placeholder="Enter new Password" pattern=".{5,10}"  required title="Please set your password between 5 to 10 characters">
+          <label for="email">Ketik Ulang Password Baru</label>
+          <input class="form-control nospace" id="renewpassword" name="renewpassword" type="password" aria-describedby="emailHelp" placeholder="Masukan Password Baru" pattern=".{5,10}"  required title="Please set your password between 5 to 10 characters">
         </div>
-        <button class="btn btn-primary btn-block" type="submit" >Update</button>
+        <button class="btn btn-primary btn-block" type="submit" >Ubah</button>
       <?=form_close();?>
 
     </div>

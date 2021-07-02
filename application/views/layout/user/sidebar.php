@@ -1,5 +1,5 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="<?php echo site_url("user/dashboard")?>">User Dashboard</a>
+    <a class="navbar-brand" href="<?php echo site_url("user/dashboard")?>">Dashboard Pengguna</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,34 +8,34 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="<?php echo site_url('shop');?>">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Go to Site</span>
+            <span class="nav-link-text">Pergi ke Website</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-user"></i>
-            <span class="nav-link-text">Manage Profile</span>
+            <span class="nav-link-text">Atur Profil</span>
           </a>
           <ul class="sidenav-second-level collapse <?= $show_profile; ?>" id="collapseExamplePages">
             <li class="<?= $change_detail_active; ?>">
-              <a href="<?php echo site_url("user/change_details");?>">Change Details</a>
+              <a href="<?php echo site_url("user/change_details");?>">Ubah Detail</a>
             </li>
             <li class="<?= $change_password_active; ?>">
-              <a href="<?php echo site_url("user/change_password");?>">Change Password</a>
+              <a href="<?php echo site_url("user/change_password");?>">Ubah Password</a>
             </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#product" data-parent="#exampleAccordion">
             <i class="fa fa-shopping-cart"></i>
-            <span class="nav-link-text">Carts and Orders</span>
+            <span class="nav-link-text">Keranjang dan Pesanan</span>
           </a>
           <ul class="sidenav-second-level collapse <?= $show_cart_order; ?>" id="product">
             <li class="<?= $your_cart_active; ?>">
-              <a href="<?php echo site_url("user/your_cart");?>">Your Cart</a>
+              <a href="<?php echo site_url("user/your_cart");?>">Keranjang Saya</a>
             </li>
             <li class="<?= $your_order_active; ?>">
-              <a href="<?php echo site_url("user/your_order");?>">Your Order</a>
+              <a href="<?php echo site_url("user/your_order");?>">Pesanan Saya</a>
             </li>
           </ul>
         </li>
@@ -139,7 +139,7 @@
         </li>-->
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#logoutmodal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            <i class="fa fa-fw fa-sign-out"></i>Keluar</a>
         </li>
       </ul>
     </div>

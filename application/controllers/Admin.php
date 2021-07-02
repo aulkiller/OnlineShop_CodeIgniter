@@ -19,7 +19,7 @@ class Admin extends My_Controller
         $this->gate_model->admin_gate();
         $data['newMessagesCount'] = $this->contact_model->getNewMessagesCount();
         $data['messages'] = $this->contact_model->getMessages();
-        $this->load->view('layout/dashboard/header', array('title' => 'Admin Dashboard'));
+        $this->load->view('layout/dashboard/header', array('title' => 'Dashboard Admin'));
         $this->loadSidebar(null, null);
         $this->load->view('admin/dashboard', $data);
         $this->load->view('layout/dashboard/footer');
