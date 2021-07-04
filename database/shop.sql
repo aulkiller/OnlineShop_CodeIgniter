@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2021 at 03:04 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.4.19
+-- Generation Time: Jul 04, 2021 at 03:43 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,6 +36,13 @@ CREATE TABLE `address_table` (
   `town` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `address_table`
+--
+
+INSERT INTO `address_table` (`address_id`, `user_id`, `country`, `postcode`, `address`, `town`) VALUES
+(12, 3, 'UEA', '111111', 'Burj Khalifa rooftop', 'Dubai');
+
 -- --------------------------------------------------------
 
 --
@@ -54,7 +61,8 @@ CREATE TABLE `cart_table` (
 --
 
 INSERT INTO `cart_table` (`cart_id`, `user_id`, `date_buy`, `flag`) VALUES
-(17, 2, '0000-00-00 00:00:00', 0);
+(17, 2, '0000-00-00 00:00:00', 0),
+(18, 3, '2021-07-04 20:35:55', 1);
 
 -- --------------------------------------------------------
 
@@ -132,7 +140,11 @@ CREATE TABLE `product_cart_table` (
 --
 
 INSERT INTO `product_cart_table` (`product_cart_id`, `cart_id`, `product_id`, `quantity`, `add_time`) VALUES
-(14, 17, 2, 5, '2021-07-04 11:24:53');
+(14, 17, 2, 5, '2021-07-04 11:24:53'),
+(15, 18, 10, 10, '2021-07-04 13:32:36'),
+(16, 18, 11, 15, '2021-07-04 13:32:44'),
+(17, 18, 15, 5, '2021-07-04 13:32:53'),
+(18, 18, 18, 2, '2021-07-04 13:33:00');
 
 -- --------------------------------------------------------
 
@@ -267,7 +279,8 @@ CREATE TABLE `user_table` (
 
 INSERT INTO `user_table` (`user_id`, `first_name`, `last_name`, `company_name`, `username`, `email`, `password`, `user_type`, `ban_flag`) VALUES
 (1, 'Admin', 'Admin', '', 'admin', 'admin@admin.com', '$2y$10$2fsiOiSV9GmPDfBLbo5D7eanESB3cFNLXk0MEAADhkhmv2IQwGZUy', 'admin', 0),
-(2, 'Aulia Ihza', 'Hendradi', '', 'aulkiller', 'aulaihzak@gmail.com', '$2y$10$ohoqKSkiKSi8AV7Ui7LWxOCNgwKkk.ER7zWUkRNqmhD53tJ86jWbG', 'user', 0);
+(2, 'Aulia Ihza', 'Hendradi', '', 'aulkiller', 'aulaihzak@gmail.com', '$2y$10$ohoqKSkiKSi8AV7Ui7LWxOCNgwKkk.ER7zWUkRNqmhD53tJ86jWbG', 'user', 0),
+(3, 'berto', 'jagos', '', 'berto', 'aaaaaaaa@gamwka.com', '$2y$10$lnXQ4CWM4eTRVdFoQxvoie9PPDaO1QWKrr1iAMVN0qxPDuiWfLikO', 'user', 0);
 
 --
 -- Indexes for dumped tables
@@ -345,13 +358,13 @@ ALTER TABLE `user_table`
 -- AUTO_INCREMENT for table `address_table`
 --
 ALTER TABLE `address_table`
-  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `cart_table`
 --
 ALTER TABLE `cart_table`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `category_table`
@@ -369,7 +382,7 @@ ALTER TABLE `contact_table`
 -- AUTO_INCREMENT for table `product_cart_table`
 --
 ALTER TABLE `product_cart_table`
-  MODIFY `product_cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `product_cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `product_images`
@@ -393,7 +406,7 @@ ALTER TABLE `review_table`
 -- AUTO_INCREMENT for table `user_table`
 --
 ALTER TABLE `user_table`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
