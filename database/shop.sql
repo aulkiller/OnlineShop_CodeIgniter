@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2021 at 10:44 PM
+-- Generation Time: Jul 04, 2021 at 03:04 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.19
 
@@ -48,6 +48,13 @@ CREATE TABLE `cart_table` (
   `date_buy` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
   `flag` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cart_table`
+--
+
+INSERT INTO `cart_table` (`cart_id`, `user_id`, `date_buy`, `flag`) VALUES
+(17, 2, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -120,6 +127,13 @@ CREATE TABLE `product_cart_table` (
   `add_time` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `product_cart_table`
+--
+
+INSERT INTO `product_cart_table` (`product_cart_id`, `cart_id`, `product_id`, `quantity`, `add_time`) VALUES
+(14, 17, 2, 5, '2021-07-04 11:24:53');
+
 -- --------------------------------------------------------
 
 --
@@ -137,29 +151,29 @@ CREATE TABLE `product_images` (
 --
 
 INSERT INTO `product_images` (`product_images_id`, `product_id`, `image_link`) VALUES
-(1, 1, 'uploads/2116916_194b6e99-5759-4fac-ab41-5d95b0503830_706_706.jpg'),
+(1, 1, 'uploads/2116916_194b6e99-5759-4fac-ab41-5d95b0503830_706_7061.jpg'),
 (2, 2, 'uploads/6550659_108411a6-a298-4fef-a531-3a212e0ae9fd_800_800.jpg'),
 (3, 3, 'uploads/8217de6a-9196-45ea-9393-22ad7dbdc029.jpg'),
 (4, 4, 'uploads/616a01f6-e0da-4aeb-91ea-8febf499be81.jpg'),
 (5, 5, 'uploads/5024822_c1e89ac0-d0e9-400a-9ea0-2e149a84618b_960_600.jpg'),
 (6, 6, 'uploads/bc08c785-a74b-45bc-931d-156e4662702c1.jpg'),
 (7, 7, 'uploads/150516_a330871c-c92f-4541-8f1d-f6c5e3df4c77_674_674.jpg'),
-(9, 9, 'uploads/f3.jpg'),
-(10, 10, 'uploads/39d1ec33-8291-4eb2-b33d-e0807da89371.jpg'),
-(11, 11, 'uploads/e46875fd-0ae4-4fd4-9aad-13d7b0d8b960.jpg'),
-(12, 12, 'uploads/158572786793243_22df4ee7-b17c-4d41-8907-4a1e71c5f8b1.jpg'),
+(9, 9, 'uploads/f31.jpg'),
+(10, 10, 'uploads/asiap.jpg'),
+(11, 11, 'uploads/new.jpg'),
+(12, 12, 'uploads/ipad.jpg'),
 (13, 13, 'uploads/40861697_b79a8e5c-c954-4ae4-aa4a-54db4b0c100a_620_620.jpg'),
 (15, 15, 'uploads/ddfadc98-83a6-45bc-bf00-5c2c2f46aebb.jpg'),
-(16, 16, 'uploads/5024b500-3b26-46f7-adbb-06d810215d89.jpg'),
-(17, 17, 'uploads/6f877cdb-16c6-43f8-8781-9e169fc973bc.jpg'),
+(16, 16, 'uploads/5024b500-3b26-46f7-adbb-06d810215d891.jpg'),
+(17, 17, 'uploads/6f877cdb-16c6-43f8-8781-9e169fc973bc1.jpg'),
 (18, 18, 'uploads/d9da86b3-e80d-4eac-aebd-1249c785bcfc.jpg'),
-(19, 19, 'uploads/a08964cf-f27a-4ee1-8637-c17b109afef4.jpg'),
+(19, 19, 'uploads/a08964cf-f27a-4ee1-8637-c17b109afef41.jpg'),
 (20, 20, 'uploads/708520_51a5b7ae-99c5-474c-9e0a-968e0a2db781_1017_1017.jpg'),
 (21, 21, 'uploads/64938777_579cc26e-23a1-41fc-8a27-62c0752b63a4_700_700.jpg'),
-(22, 22, 'uploads/9adf0d12-c606-48f1-b9cc-38e167315175.jpg'),
-(28, 28, 'uploads/d1f67b18-7d38-47ff-a88a-1085269079e6.jpg'),
-(29, 29, 'uploads/100010336_9829e4b9-3394-4ceb-953e-4a9eafaf394a_550_550.jpg'),
-(41, 41, 'uploads/3576159_17e9bfe5-b249-43ea-ad15-9c20f2cef41d_2048_20482.jpg');
+(22, 22, 'uploads/9adf0d12-c606-48f1-b9cc-38e1673151751.jpg'),
+(28, 28, 'uploads/d1f67b18-7d38-47ff-a88a-1085269079e61.jpg'),
+(29, 29, 'uploads/100010336_9829e4b9-3394-4ceb-953e-4a9eafaf394a_550_5501.jpg'),
+(41, 41, 'uploads/3576159_17e9bfe5-b249-43ea-ad15-9c20f2cef41d_2048_2048.jpg');
 
 -- --------------------------------------------------------
 
@@ -184,7 +198,7 @@ CREATE TABLE `product_table` (
 --
 
 INSERT INTO `product_table` (`product_id`, `category_id`, `seller_id`, `product_name`, `price`, `short_desc`, `description`, `add_time`, `active_flag`) VALUES
-(1, 28, 1, 'Blon BL-03', '300000.00', 'BLON BL-03 10mm Carbon Diaphragm Dynamic Driver', '<ul>\r\n	<li>Specification:</li>\r\n	<li>Name: BLON BL-03</li>\r\n	<li>Earphone&nbsp;type:&nbsp;In-ear</li>\r\n	<li>Driver unit:&nbsp;10mm Carbon Diaphragm Dynamic Drive</li>\r\n	<li>Impedance: 32&Omega;</li>\r\n	<li>Earphone&nbsp;sensitivity:&nbsp;102dB/mW</li>\r\n	<li>Frequency range: 20-20000Hz</li>\r\n	<li>Interface: 3.5mm&nbsp;Gilded</li>\r\n	<li>Plug Type: L curved</li>\r\n	<li>Cable Length:&nbsp;1.2m&plusmn;3cm</li>\r\n	<li>Interface:&nbsp;2Pin 0.78MM&nbsp;&nbsp;connector</li>\r\n	<li>Microphone:&nbsp;Yes</li>\r\n	<li>Detachable Cable: Yes</li>\r\n</ul>\r\n', '2021-07-02 18:24:59', 0),
+(1, 28, 1, 'Blon BL-03', '300000.00', 'BLON BL-03 10mm Carbon Diaphragm Dynamic Driver', '<ul>\r\n	<li>Specification:</li>\r\n	<li>Name: BLON BL-03</li>\r\n	<li>Earphone&nbsp;type:&nbsp;In-ear</li>\r\n	<li>Driver unit:&nbsp;10mm Carbon Diaphragm Dynamic Drive</li>\r\n	<li>Impedance: 32&Omega;</li>\r\n	<li>Earphone&nbsp;sensitivity:&nbsp;102dB/mW</li>\r\n	<li>Frequency range: 20-20000Hz</li>\r\n	<li>Interface: 3.5mm&nbsp;Gilded</li>\r\n	<li>Plug Type: L curved</li>\r\n	<li>Cable Length:&nbsp;1.2m&plusmn;3cm</li>\r\n	<li>Interface:&nbsp;2Pin 0.78MM&nbsp;&nbsp;connector</li>\r\n	<li>Microphone:&nbsp;Yes</li>\r\n	<li>Detachable Cable: Yes</li>\r\n</ul>\r\n', '2021-07-04 11:19:53', 0),
 (2, 28, 1, 'TIN HIFI T2 Plus', '650000.00', 'TIN HIFI T2 Plus NanoPure Dynamic Driver', '<ul>\r\n	<li>Tin Hifi</li>\r\n	<li>Drivers: 10 mm NanoPure nickel-zinc alloy dynamic drivers</li>\r\n	<li>Sensitivity: 104 &plusmn; 3 dB at 1 kHz, 0.126V</li>\r\n	<li>Frequency response: 10 Hz &ndash; 20 kHz</li>\r\n	<li>Impedance: 32 ohms &plusmn; 15%</li>\r\n	<li>Rated power: 3 mW</li>\r\n	<li>Maximum power: 5 mW</li>\r\n	<li>Maximum distortion: 1% at 1 kHz, 0.126V</li>\r\n	<li>Input: Gold-plated MMCX connector</li>\r\n	<li>Termination: 3.5 mm black carbon multi-dimensional heavy plug</li>\r\n	<li>Cable: 4-core silver-plated Kevlar-enameled 22AWG copper cable</li>\r\n	<li>Cable length: 4.1 ft (1.25 m)</li>\r\n</ul>\r\n', '2021-07-02 17:21:11', 0),
 (3, 28, 1, 'Etymotic Research ER2SE', '1715000.00', 'Etymotic Research ER2SE Dynamic Driver', '<ul>\r\n	<li>Brand Etymotic Research</li>\r\n	<li>Connections = wired</li>\r\n	<li>Model Name ETYER2SE</li>\r\n	<li>Color Multicolored</li>\r\n	<li>Headphones Form Factor In Ear</li>\r\n	<li>About this item</li>\r\n	<li>True high-accuracy sound experience</li>\r\n	<li>Metal earpieces with anodized ?nish</li>\r\n	<li>35+ dB of external noise isolation</li>\r\n	<li>Assortment of ear tips for the perfect in-ear ?t</li>\r\n	<li>Detachable cable allows for easy replacement</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>Detachable, 4-foot cable</li>\r\n	<li>Foam and 3-flange ear tips</li>\r\n	<li>Filter removal tool and filters</li>\r\n	<li>Compact storage pouch</li>\r\n	<li>Shirt clip</li>\r\n</ul>\r\n', '2021-07-02 17:26:04', 0),
 (4, 29, 1, 'NiceHCK Traceless', '35000.00', 'NiceHCK Traceless Dynamic Driver Earbud Earphone', '<ul>\r\n	<li>Product Name : NICEHCK Traceless earbud</li>\r\n	<li>Brand : NICEHCK</li>\r\n	<li>Model : Traceless</li>\r\n	<li>Type : Earbud</li>\r\n	<li>Impedance : 32&Omega;</li>\r\n	<li>Earphone sensitivity : 115dB/mW</li>\r\n	<li>Frequency range : 20-20000Hz</li>\r\n	<li>Earphone plug type : 3.5mm straight plug</li>\r\n	<li>Cable Length : 1.2m&plusmn;5cm</li>\r\n	<li>Whether with Mic : With Mic / No Mic ( two versions can choose)</li>\r\n	<li>Driver unit : Single 15.4mm PET Dynamic Drive unit</li>\r\n</ul>\r\n', '2021-07-02 17:28:08', 0),
@@ -194,7 +208,7 @@ INSERT INTO `product_table` (`product_id`, `category_id`, `seller_id`, `product_
 (9, 32, 1, 'Poco F3 6/128GB', '4499000.00', 'POCO F3  NFC Snapdragon™ 870 48MP 4520mAh', '<p>Penyimpanan &amp; RAM<br />\r\n6GB+128GB, 8GB + 256GB<br />\r\nRAM LPDDR5 + PENYIMPANAN UFS 3.1<br />\r\nBaterai 4520mAh (umum)<br />\r\nPengisian daya cepat 33W<br />\r\n<br />\r\nKamera<br />\r\nKamera utama 48MP f/1,79<br />\r\nPiksel besar 1,6&mu;m (4-in-1)<br />\r\nKamera ultra wide 8MP FOV 119&deg; f/2,2<br />\r\nKamera telemakro 5MP f/2,4 AF (3cm-7cm)<br />\r\nFitur fotografi kamera belakang<br />\r\nJaringan &amp; Konektivitas<br />\r\nSIM ganda<br />\r\nPita jaringan:<br />\r\nMendukung 5G / 4G / 3G / 2G<br />\r\nSensor<br />\r\nSensor jarak | Sensor cahaya ambien | Akselerometer | Giroskop | Kompas elektronik | Motor linear | IR Blaster<br />\r\n<br />\r\nSistem operasi<br />\r\nMIUI 12 untuk POCO<br />\r\n<br />\r\n<br />\r\nIsi Paket Pembelian<br />\r\n<br />\r\nPOCO F3<br />\r\nAdaptor daya<br />\r\nKabel USB Tipe C<br />\r\nAdaptor headphone Tipe C hingga 3,5mm<br />\r\nCasing pelindung<br />\r\nAlat pembuka SIM</p>\r\n', '2021-07-02 18:32:07', 0),
 (10, 32, 1, 'Samsung Galaxy S20 FE', '7769000.00', 'Samsung S20 FE SEIN 6.5-inch', '<ul>\r\n	<li>SIM Single SIM (Nano-SIM) or Hybrid Dual SIM (Nano-SIM, dual stand-by)</li>\r\n	<li>Size 6.5 inches, 101.0 cm2 (~84.8% screen-to-body ratio)</li>\r\n	<li>PLATFORM OS Android 10, One UI 2.5</li>\r\n	<li>Chipset Exynos 990 (7 nm+)</li>\r\n	<li>CPU Octa-core (2x2.73 GHz Mongoose M5 &amp; 2x2.50 GHz Cortex-A76 &amp; 4x2.0 GHz Cortex-A55)</li>\r\n	<li>GPU Mali-G77 MP11</li>\r\n	<li>MEMORY Card slot microSDXC (uses shared SIM slot)</li>\r\n	<li>Internal 128GB 8GB RAM,</li>\r\n	<li>MAIN CAMERA Triple 12 MP,</li>\r\n	<li>8 MP,</li>\r\n	<li>12 MP,</li>\r\n	<li>SELFIE CAMERA Single 32 MP,</li>\r\n	<li>BATTERY Type Li-Po 4500 mAh, non-removable</li>\r\n</ul>\r\n', '2021-07-02 18:33:59', 0),
 (11, 32, 1, 'Apple iPhone 12 128GB', '13999000.00', 'Apple iPhone 12 - Garansi Resmi iBox Apple Indonesia', '<ul>\r\n	<li>Dimensions 146.7 x 71.5 x 7.4 mm (5.78 x 2.81 x 0.29 in)</li>\r\n	<li>Weight 164 g (5.78 oz)</li>\r\n	<li>Build Glass front (Gorilla Glass), glass back (Gorilla Glass), aluminum frame</li>\r\n	<li>SIM Single SIM (Nano-SIM and/or eSIM) or Dual SIM (Nano-SIM, dual stand-by) - for China</li>\r\n	<li>IP68 dust/water resistant (up to 6m for 30 mins)</li>\r\n	<li>Apple Pay (Visa, MasterCard, AMEX certified)</li>\r\n	<li>DISPLAY</li>\r\n	<li>Type Super Retina XDR OLED, HDR10, 625 nits (typ), 1200 nits (peak)</li>\r\n	<li>Size 6.1 inches, 90.2 cm2 (~86.0% screen-to-body ratio)</li>\r\n	<li>Resolution 1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)</li>\r\n	<li>Protection Scratch-resistant ceramic glass, oleophobic coating</li>\r\n	<li>Dolby Vision</li>\r\n	<li>Wide color gamut</li>\r\n	<li>True-tone</li>\r\n	<li>PLATFORM</li>\r\n	<li>OS iOS 14.1, upgradable to iOS 14.2</li>\r\n	<li>Chipset Apple A14 Bionic (5 nm)</li>\r\n	<li>CPU Hexa-core (2x3.1 GHz Firestorm + 4x1.8 GHz Icestorm)</li>\r\n	<li>GPU Apple GPU (4-core graphics)</li>\r\n	<li>MEMORY</li>\r\n	<li>Card slot No</li>\r\n	<li>Internal 64GB 4GB RAM, 128GB 4GB RAM, 256GB 4GB RAM</li>\r\n	<li>NVMe</li>\r\n	<li>Dual 12 MP, f/1.6, 26mm (wide), 1.4&micro;m, dual pixel PDAF, OIS</li>\r\n</ul>\r\n', '2021-07-02 18:42:01', 0),
-(12, 33, 1, 'iPad Pro 2020 - WIFI ONLY 128GB', '11190000.00', 'iPad Pro 2020 4th Gen 12.9\"', '<ul>\r\n	<li>Display: 12.9&nbsp;inches (2160 x 1620 pixels)</li>\r\n	<li>Storage: 128GB</li>\r\n	<li>CPU: A12 Bionic</li>\r\n	<li>Camera: 8MP</li>\r\n	<li>Video recording: 1080p at 30 fps</li>\r\n	<li>Front camera: 1.2MP</li>\r\n	<li>Battery life (claimed): Up to 9 hours</li>\r\n	<li>Size: 9.8 x 6.8 x 0.29 inches</li>\r\n	<li>Weight: 1.08 pounds</li>\r\n</ul>\r\n', '2021-07-02 18:45:25', 0),
+(12, 33, 1, 'iPad Pro 2020 - WIFI ONLY 128GB', '11190000.00', 'iPad Pro 2020 4th Gen 12.9', '<ul>\r\n	<li>Display: 12.9&nbsp;inches (2160 x 1620 pixels)</li>\r\n	<li>Storage: 128GB</li>\r\n	<li>CPU: A12 Bionic</li>\r\n	<li>Camera: 8MP</li>\r\n	<li>Video recording: 1080p at 30 fps</li>\r\n	<li>Front camera: 1.2MP</li>\r\n	<li>Battery life (claimed): Up to 9 hours</li>\r\n	<li>Size: 9.8 x 6.8 x 0.29 inches</li>\r\n	<li>Weight: 1.08 pounds</li>\r\n</ul>\r\n', '2021-07-04 10:58:19', 0),
 (13, 33, 1, 'SAMSUNG Galaxy TAB S7 Plus [8/256GB]', '15839000.00', 'SAMSUNG Galaxy TAB S7 Plus [8/256GB] - Garansi Resmi SEIN', '<p>Spesifikasi :<br />\r\n<br />\r\n* Prosesor<br />\r\n* CPU Speed 3.09GHz, 2.4GHz, 1.8GHz<br />\r\n* CPU Type Octa-Core?<br />\r\n<br />\r\n* Display<br />\r\n* Ukuran (Main Display) 12.4&quot; (315.0mm)<br />\r\n* Resolusi (Main Display) 2800 x 1752 (WQXGA+)<br />\r\n* Teknologi (Main Display) Super AMOLED<br />\r\n* Kedalaman Warna (Main Display) 16M?<br />\r\n<br />\r\n* Dukungan S Pen Yes (Gesture/Remote Control)?<br />\r\n<br />\r\n* Kamera<br />\r\n* Main Camera - Resolution 13.0 MP + 5.0 MP<br />\r\n* Main Camera - Auto Focus Yes<br />\r\n* Front Camera - Resolution 8.0 MP<br />\r\n* Main Camera - Flash Yes<br />\r\n* Resolusi Rekaman Video UHD 4K (3840 x 2160) @30fps?<br />\r\n<br />\r\n* Memori<br />\r\n* RAM Size (GB) 8<br />\r\n* ROM Size (GB) 256<br />\r\n* Available Memory (GB)* 221.2<br />\r\n* Dukungan Memori Eksternal MicroSD (Up to 1TB)<br />\r\n<br />\r\n* Spesifikasi Fisik<br />\r\n* Dimension (HxWxD, mm) 185.0 x 285.0 x 5.7<br />\r\n* Weight (g) 575<br />\r\n<br />\r\n* Baterai<br />\r\n* Internet Usage Time(LTE) (Hours) Up to 8<br />\r\n* Internet Usage Time(Wi-Fi) (Hours) Up to 8<br />\r\n* Video Playback Time (Hours, Wireless) Up to 14<br />\r\n* Battery Capacity (mAh, Typical) 10090<br />\r\n* Removable No<br />\r\n* Audio Playback Time (Hours, Wireless) Up to 205<br />\r\n* Talk Time (4G LTE) (Hours) Up to 75?</p>\r\n', '2021-07-02 19:00:48', 0),
 (15, 42, 1, 'Kabel Charger Anker Powerline USB Type C to C', '99000.00', 'Kabel 0,9M 3FT Data - A8032 - Powerline SLCT+', '<p>PowerLine Select+ [A8032] USB-C to USB-C 2.0 Cable for Samsung, Oppo, Xiaomi, Realmi, Vivo, etc<br />\r\n<br />\r\n<br />\r\n*Length : 3 feet / 0,9m<br />\r\n*Double braided nylon<br />\r\n*Connector One: Type-C | Connector Two: Type-C<br />\r\n*Cable Speed: 480 Mbps<br />\r\n<br />\r\nWarna: Hitam<br />\r\n<br />\r\nSangat Tahan Lama: Pengisian Daya dan Kabel Data Double Braided Nylon.<br />\r\n<br />\r\nPengiriman Daya: Mendukung Pengiriman Daya Pengisian Berkecepatan Tinggi untuk Ponsel, Tablet, dan Laptop.<br />\r\n<br />\r\nDibangun Kuat: Ujung konektor yang diperkuat dan kabel nilon yang dikepang dapat menahan 15.000 Tekukan</p>\r\n', '2021-07-02 19:07:34', 0),
 (16, 34, 1, 'ASUS ROG ZEPHYRUS G15', '29999000.00', 'ASUS ROG Ryzen 9-5900HS 16GB 1TB RTX3060 6GB OHS', '<ul>\r\n	<li>Processor: AMD Ryzen&trade; 9 5900HS Processor 3.1 GHz (16M Cache, up to 4.5 GHz)</li>\r\n	<li>Memory: 8GB DDR4 on board + 8GB DDR4-3200 SO-DIMM</li>\r\n	<li>Storage: 1TB M.2 NVMe&trade; PCIe&reg; 3.0 SSD</li>\r\n	<li>Grafis : NVIDIA&reg; GeForce RTX&trade; 3060 Laptop GPU</li>\r\n	<li>With ROG Boost up to 1525MHz at 80W (95W with Dynamic Boost)</li>\r\n	<li>6GB GDDR6</li>\r\n	<li>Display: 15.6-inch QHD (2560 x 1440) 16:9 300nits anti-glare IPS-levelPantone validated panel</li>\r\n	<li>Operating System: Windows 10 Home</li>\r\n	<li>Bundled Software : Office Home Student 2019</li>\r\n</ul>\r\n', '2021-07-02 20:02:18', 0),
@@ -337,7 +351,7 @@ ALTER TABLE `address_table`
 -- AUTO_INCREMENT for table `cart_table`
 --
 ALTER TABLE `cart_table`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `category_table`
@@ -355,7 +369,7 @@ ALTER TABLE `contact_table`
 -- AUTO_INCREMENT for table `product_cart_table`
 --
 ALTER TABLE `product_cart_table`
-  MODIFY `product_cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `product_cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `product_images`
