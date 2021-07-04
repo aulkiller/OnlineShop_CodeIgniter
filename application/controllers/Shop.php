@@ -44,7 +44,7 @@ class Shop extends CI_Controller {
         $categoryData = $this->category_model->getAllCategoriesWithSubCategories();
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
         if ($page == 1 || $page == null){
-            $offset = 1;
+            $offset = 0;
         } else {
             $offset = ($page-1)*$config['per_page']+1;
         }
