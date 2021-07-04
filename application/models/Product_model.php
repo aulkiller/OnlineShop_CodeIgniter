@@ -102,8 +102,10 @@ class Product_model extends CI_Model {
         if (!$productImageId) {
             $this->db->insert('product_images', array('product_id' => $product_id, "image_link" => $image_link));
         } else {
-            $image_path = $_SERVER['DOCUMENT_ROOT'].'/codeigniter/'.$this->getProductImageLink($product_id);
-            unlink($image_path);
+            // $image_path = "$_SERVER['DOCUMENT_ROOT'].'/codeigniter/'".$this->getProductImageLink($product_id);
+            $image_path = $this->getProductImageLink($product_id);
+            array_map('unlink', glob(FCPATH.$image_path));
+            // unlink($image_path);
             $this->db->where(array('product_id' => $product_id))->update('product_images', array("image_link" => $image_link));
         }
         return $update;
