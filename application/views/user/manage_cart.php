@@ -45,7 +45,7 @@
                       Jml : <?= $cart->quantity;?>
                     </td>
                     <td rowspan=1 align="left" >
-                      Harga : Rp <?= number_format ( $cart->price * $cart->quantity, 2 );?>
+                      Harga : Rp. <?= number_format ( $cart->price * $cart->quantity, 2, ",", "." );?>
                     </td>
                     <td rowspan=2>
                       <button data-toggle="modal" data-target="#cartmodal" class="btn-sm btn-danger passID" data-id="<?= $cart->product_cart_id; ?>" onclick="passID(<?= $cart->product_cart_id; ?>)"> x </button>
@@ -56,7 +56,7 @@
                 <?php
                   endforeach;
                 ?>
-                <tr><td colspan=3></td><th colspan=1>Harga Total :</th><th colspan='2'> Rp <?= number_format( $totalPrice, 2); ?></th></tr>
+                <tr><td colspan=3></td><th colspan=1>Harga Total :</th><th colspan='2'> Rp. <?= number_format( $totalPrice, 2, ",", "." ); ?></th></tr>
                 <?php else: ?>
                 <tr align="center"><td>Keranjang Anda Kosong.</td></tr>
                  <?php endif; ?>

@@ -52,7 +52,7 @@
                 <?php
                   endforeach;
                 ?>
-                <tr><td colspan=3></td><th colspan=1>Harga Total :</th><th colspan='2'> $ <?= number_format( $totalPrice, 2); ?></th></tr>
+                <tr><td colspan=3></td><th colspan=1>Harga Total :</th><th colspan='2'> Rp. <?= number_format( $totalPrice, 2, ",", "." ); ?></th></tr>
                 <tr><td colspan=3></td><th colspan=1>Tanggal Pembelian :</th><th colspan='2'>
                     <?= date_format(date_create($cart->date_buy), "d M Y"); ?>
                 </th></tr>

@@ -32,14 +32,14 @@
 									<tr align="center">
 										<td><?= $count++;?></td>
 										<td align="left"><?= $product->product_name; ?></td>
-										<td>Rp <?= $product->price; ?></td>
+										<td>Rp. <?= $product->price; ?></td>
 										<td><?= $product->quantity; ?></td>
-										<td>Rp <?= number_format ( $product->quantity * $product->price, 2  );  ?></td>
+										<td>Rp. <?= number_format ( $product->quantity * $product->price, 2, ",", "."  );  ?></td>
 									</tr>
 								<?php endforeach; ?>
 								<tr>
 										<td colspan="4"  align="right"><strong>Total</strong></td>
-										<td>Rp <?= number_format ( $totalPrice, 2  );  ?></td>
+										<td>Rp. <?= number_format ( $totalPrice, 2, ",", "."  );  ?></td>
 									</tr>
 							</tbody>
 						</table>

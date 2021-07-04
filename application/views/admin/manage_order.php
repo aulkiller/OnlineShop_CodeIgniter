@@ -37,7 +37,7 @@
                   <tr align="center">
                     <td><?= $count++;?></td>
                     <td align="left"><?= $order->first_name . " " . $order->last_name; ?></td>
-                    <td>$ <?= number_format ( $order->totalPrice, 2  );  ?></td>
+                    <td>Rp. <?= number_format ( $order->totalPrice, 2, ",", "."  );  ?></td>
                     <td><?= date_format(date_create($order->date_buy), "d M Y H:i"); ?></td>
                     <td><a href="<?= site_url('admin/view_order/'.$order->cart_id)?>">Lihat Pesanan</a></td>
                   </tr>

@@ -98,7 +98,7 @@
 									<a href="<?= base_url(); ?>index.php/Shop/product/<?= $product->product_id; ?>"><?= $product->product_name; ?></a>
 								</h5>
 								<h6>
-									Rp. <?= $product->price; ?>
+									Rp. <?= number_format ( $product->price, 2, ",", "." );  ?>
 								</h6>
 								<p class="card-text"><?= $product->short_desc; ?></p>
 							</div>

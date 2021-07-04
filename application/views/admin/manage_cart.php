@@ -37,7 +37,7 @@
                   <tr align="center">
                     <td><?= $count++;?></td>
                     <td align="left"><?= $cart->first_name . " " . $cart->last_name; ?></td>
-                    <td>Rp <?= number_format ( $cart->totalPrice, 2  );  ?></td>
+                    <td>Rp. <?= number_format ( $cart->totalPrice, 2, ",", "." );  ?></td>
                     <!-- <td>datetime</td> -->
                     <td><a href="<?= site_url('admin/view_cart/'.$cart->cart_id)?>">Lihat Keranjang</a></td>
                   </tr>
