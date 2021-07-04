@@ -69,7 +69,10 @@
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 			<div class="container">
-				<a class="navbar-brand" href="<?= site_url('shop'); ?>" >Toko Apa Ya</a>
+				<a class="navbar-brand" href="<?= site_url('shop'); ?>" >
+					<img style="width:25%" src="<?= base_url('style/assets/images/logo.png'); ?>" alt="">
+					Toko Apa Ya
+				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
