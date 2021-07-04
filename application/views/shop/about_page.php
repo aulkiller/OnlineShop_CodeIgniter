@@ -5,7 +5,7 @@
 <div class="container">
 <div class="row-lg">
   <div class="col-lg-8 col-md-10 mx-auto">
-	<p><b>Toko Apa Ya?</b> Toko kami merupakan toko online yang berfokus utama pada jual beli barang elektronik. Toko menyediakan berbagai barang elektronik rumah, <i>mobile</i>, serta berbagai peralatan lainnya</p>
+	<p><b>Toko Apa Ya?</b> Toko kami merupakan toko online yang berfokus utama pada jual beli barang elektronik. Toko menyediakan berbagai barang elektronik rumah, <i>mobile</i>, barang-barang hobi, serta berbagai peralatan lainnya</p>
   </div>
 </div>
 </div>
