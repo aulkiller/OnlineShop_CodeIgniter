@@ -3,11 +3,16 @@
 </div>
 
 <div class="container">
-<div class="row">
+<div class="row-lg">
   <div class="col-lg-8 col-md-10 mx-auto">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et.</p>
+	<p><b>Toko Apa Ya?</b> Toko kami merupakan toko online yang berfokus utama pada jual beli barang elektronik. Toko menyediakan berbagai barang elektronik rumah, <i>mobile</i>, serta berbagai peralatan lainnya</p>
   </div>
 </div>
 </div>
+<!-- Footer -->
+<footer style="position: fixed; left: 0; bottom: 0;width:100%;margin-top: auto" class="py-5 mt-5 bg-dark">
+			<div class="container">
+				<p class="m-0 text-center text-white">Copyright &copy; Toko Apa Ya 2021</p>
+			</div>
+			<!-- /.container -->
+		</footer>

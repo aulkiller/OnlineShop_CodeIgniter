@@ -18,14 +18,6 @@
 		</div>
 	</div>
 
-	
-		<!-- Footer -->
-		<footer class="py-5 mt-5 bg-dark">
-			<div class="container">
-				<p class="m-0 text-center text-white">Copyright &copy; Toko Apa Ya 2021</p>
-			</div>
-			<!-- /.container -->
-		</footer>
 
 		<?php include ('logout.php') ?>
 

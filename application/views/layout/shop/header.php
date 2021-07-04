@@ -64,7 +64,7 @@
 
 	</head>
 
-	<body>
+	<body style="min-height: 100vh;display: flex;flex-direction: column;">
 
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
