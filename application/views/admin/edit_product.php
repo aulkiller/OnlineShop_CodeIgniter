@@ -52,6 +52,13 @@
         </div>
 
         <div class="form-group">
+          <label class="control-label">Jumlah Stok</label>
+          <div>
+          <input id="product_stock" type="number" class="form-control" name="product_stock" value=<?= $product->stock ?> min="0">
+          </div>
+        </div>
+
+        <div class="form-group">
           <label class="control-label">Deskripsi Panjang</label>
           <div>
             <textarea id="textarea" name="product_description"><?= $product->description; ?></textarea>

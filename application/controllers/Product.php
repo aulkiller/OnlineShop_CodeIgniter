@@ -83,6 +83,7 @@ class Product extends My_Controller {
             $data["price"] = $this->input->post('product_price');
             $data["description"] = $this->input->post('product_description');
             $data["short_desc"] = $this->input->post('product_short_description');
+            $data["stock"] = $this->input->post('product_stock');
             $data["category_id"] = $this->input->post('product_category');
 
             // upload images
@@ -180,6 +181,7 @@ class Product extends My_Controller {
             $data["price"] = $this->input->post('product_price');
             $data["description"] = $this->input->post('product_description');
             $data["short_desc"] = $this->input->post('product_short_description');
+            $data["stock"] = $this->input->post('product_stock');
             $data["category_id"] = $this->input->post('product_category');
             $data["seller_id"] = $this->session->userdata('userid');
 

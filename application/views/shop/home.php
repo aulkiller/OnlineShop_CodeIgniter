@@ -100,12 +100,15 @@
 								<h6>
 									Rp. <?= number_format ( $product->price, 2, ",", "." );  ?>
 								</h6>
+								<h6>
+									Stok : <?= $product->stock  ?>
+								</h6>
 								<p class="card-text"><?= $product->short_desc; ?></p>
 							</div>
 							<div class="card-footer">
 								<!-- <?= form_open(site_url('cart/addToCart'), array( "id" => "addToCart_$product->product_id")); ?> -->
 								<!-- <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> -->
-								<input type="number" name="quantity" class="form-control" placeholder="Jumlah" id="quantity_<?= $product->product_id; ?>" />
+								<input type="number" name="quantity" class="form-control" placeholder="Jumlah" id="quantity_<?= $product->product_id; ?>" min="0"/>
 								<input type="hidden" name="product_id" class="form-control" value="<?= $product->product_id; ?>"/>
 								<br>
 								<button class="pull-right btn btn-block btn-primary" type="button" onclick="addToCart(<?= $product->product_id; ?>)">

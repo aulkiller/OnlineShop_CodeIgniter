@@ -52,6 +52,14 @@
         </div>
 
         <div class="form-group">
+          <?= form_error('product_stock'); ?>
+          <label class="control-label">Jumlah Stok</label>
+          <div>
+          <input id="product_stock" type="number" class="form-control" name="product_stock" value="<?php echo set_value('product_stock'); ?>" min="0">
+          </div>
+        </div>
+
+        <div class="form-group">
           <?= form_error('product_description'); ?>
           <label class="control-label">Deskripsi Lengkap Produk</label>
           <div>

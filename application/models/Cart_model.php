@@ -151,12 +151,25 @@ class Cart_model extends CI_Model {
     **/
 
     public function addProductToCart($cart_id, $product_id, $quantity) {
+
         $array = array (
             "cart_id" => $cart_id,
             "product_id" => $product_id,
             "quantity" => $quantity
         );
-        return $this->db->insert("product_cart_table", $array);
+
+        if($this->UpdateStock($product_id, $quantity)){
+            return $this->db->insert("product_cart_table", $array);
+        }
+
+    }
+
+    private function UpdateStock($product_id, $stock){
+
+        $this->db->set('stock', 'stock - '.$stock, FALSE);
+        $this->db->where('product_id', $product_id);
+        return $this->db->update('product_table');
+        
     }
 
     /**
@@ -216,7 +229,18 @@ class Cart_model extends CI_Model {
     **/
     
     public function removeFromCart($pcid) {
-        return $this->db->where('product_cart_id', $pcid)->delete(PRODUCTCART);
+        $getto = $this->db->get_where("product_cart_table pct", array("pct.product_cart_id" => $pcid))->row();
+        if($this->ResetStock($getto->product_id, $getto->quantity)){
+            return $this->db->where('product_cart_id', $pcid)->delete(PRODUCTCART);
+        }
+    }
+
+    private function ResetStock($product_id, $stock){
+
+        $this->db->set('stock', 'stock + '.$stock, FALSE);
+        $this->db->where('product_id', $product_id);
+        return $this->db->update('product_table');
+        
     }
     
     /**
